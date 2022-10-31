@@ -1,0 +1,19 @@
+{
+  "recordAssesmentRequest": {
+    "userDetails": {
+      "userId": "Ragi1001",
+      "name": "daniel"
+    },
+    "assesmentdetails": [
+      {
+        "question": "What is an ivestment objective",
+        "answer": "option1"
+      },
+      {
+        "question": "What is an ivestment objective",
+        "answer": "option1"
+      }
+    ],
+    "submitionDateTime": "01-03-20227112-20-20"
+  }
+}

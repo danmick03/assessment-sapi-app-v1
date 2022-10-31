@@ -1,0 +1,10 @@
+{
+  "msg": "failed operation",
+  "code": 500,
+  "eventId": "1234568790-nafasfdskvkdsvkd-3452-oei",
+  "error": {
+    "type": "SERVER_ERROR",
+    "title": "Internal server error",
+    "details": "The server encounterd an unexpected condition which prevented it from fulfilling the request"
+  }
+}

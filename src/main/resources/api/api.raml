@@ -1,0 +1,49 @@
+#%RAML 1.0
+title: assesment-sapi-raml
+description: this raml is for sapi API
+version: 1.0.0
+protocols:
+  - HTTPS
+  - HTTP
+
+traits:
+  commonHeader: !include /exchange_modules/cb97d7ca-ecba-4837-ac2b-9d8d1a2cbdad/commonfragment/1.0.10/trait/common.header.trait.raml
+  errorResponse: !include /exchange_modules/cb97d7ca-ecba-4837-ac2b-9d8d1a2cbdad/commonfragment/1.0.10/trait/common.error.response.trait.raml
+types:
+  get-assessment-response: !include /exchange_modules/cb97d7ca-ecba-4837-ac2b-9d8d1a2cbdad/commonfragment/1.0.10/dataType/get-assessment-response-dataType.raml
+  post-assessment-request: !include /exchange_modules/cb97d7ca-ecba-4837-ac2b-9d8d1a2cbdad/commonfragment/1.0.10/dataType/post-assessment-request-dataType.raml
+  post-assessment-response: !include /exchange_modules/cb97d7ca-ecba-4837-ac2b-9d8d1a2cbdad/commonfragment/1.0.10/dataType/post-assessment-response-dataType.raml
+
+
+/assessments:
+  description: this resource is used for assessment to check fund eligiblity and submit fund assessment libility assessment.
+  get:
+    description: this API will retrive set of questions ansewer from salesforce system.
+    is:
+      - commonHeader
+      - errorResponse
+    responses:
+      200:
+        body:
+          application/json:
+            type: get-assessment-response
+            example: !include /example/get-assessment-response-example.json
+ 
+  post:
+    description: this API will submit assesment to salesforce system.
+    is:
+      - commonHeader
+      - errorResponse
+    body:
+      application/json:
+        type: post-assessment-request
+        example: !include /example/post-assessment-request-example.json
+
+    responses:
+      201:
+        body:
+          application/json:
+            type: post-assessment-response
+            example: !include /example/post-assessment-response-example.json
+ 
+ 

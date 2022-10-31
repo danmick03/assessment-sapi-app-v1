@@ -1,0 +1,9 @@
+#%RAML 1.0 Library
+usage:
+traits:
+  commonHeader: /trait/common.header.trait.raml
+  errorResponse: /trait/common.error.response.trait.raml
+types:
+  get-assessment-response: !include /dataType/get-assessment-response-dataType.raml
+  post-assessment-request: !include /dataType/post-assessment-request-dataType.raml
+  post-assessment-response: !include /dataType/post-assessment-response-dataType.raml

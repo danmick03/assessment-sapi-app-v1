@@ -1,0 +1,21 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  retriveAssessmentResponse:
+    required: true
+    type: array
+    items:
+      properties:
+        question:
+          required: true
+          type: string
+          example: "what is an investment obkective"
+        answer:
+          required: true
+          type: array
+          items:
+            properties:
+              option:
+                required: true
+                type: string
+                example: "option1"
